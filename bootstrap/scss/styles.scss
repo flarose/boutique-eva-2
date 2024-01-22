@@ -1,0 +1,19 @@
+@use './custom' as *;
+
+// IMPORT THE COMPOnENTS
+@use 'components/animations' as *;
+@use 'components/buttons' as *;
+@use 'components/mixins' as *;
+@use 'components/typography' as *;
+
+// IMPORT THE SECTION
+
+@use 'sections/navbar' as *;
+@use 'sections/intro-section' as *;
+@use 'sections/campanies' as *;
+@use 'sections/services' as *;
+@use 'sections/testimonials' as *;
+@use 'sections/faq' as *;
+@use 'sections/portfolio' as *;
+@use 'sections/get-started' as *;
+@use 'sections/footer' as *;

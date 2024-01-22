@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Live Coding Sass</title>
+        <link rel="stylesheet" href="css/styles.css">
+        
+        <script src="https://kit.fontawesome.com/f890919a43.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css">
+        <!-- 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> -->
+        
+        <script src="EmailJS.js"></script>
+
+        <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+          (function(){
+              emailjs.init("Ro_2l2ZfqWMogjqO2");
+          })();
+        </script>
+    </head>
+    <body>
+        <!-- <p id="couleur">Bonjour à tous</p>
+        <p id="cadre">Encadré</p>
+        <p id="texte">Bonjour <span><a href="#">tout le monde</a></span></p>
+        <div id="carre1">
+            <div id="carre2"></div>
+        </div>
+        <div id="carre3">
+            <div id="carre4"></div>  
+        </div> -->
+        
+        <!-- START THE NAVBAR SECTION -->
+        <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+            <div class="container">
+              <a class="navbar-brand" href="#"><img src="images/logo.png" alt=" "width="118" height="118" class="d-inline-block align-text-center">la boutique d'eva</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <!-- <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link" href="#">Services</a>
+                  <a class="nav-link" href="#">Testimonials</a>
+                  <a class="nav-link" href="#">faq</a>
+                  <a class="nav-link" href="#">portfolio</a>
+                  <a class="nav-link" href="#">contact</a>
+
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+
+                  <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">faq</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">contact</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
+                  </ul>
+                
+                <button type="button" class="rounded-pill btn-rounded">(+1)327672771 <span><i class="fas fa-phone-alt"></i></span></button>
+                <!-- </div> -->
+              </div>
+            </div>
+          </nav>
+          <!-- START THE INTRO SECTION -->
+          <section id="home" class="intro-section">
+            <div class="container">
+              <div class="row align-items-center text-white">
+                <!-- START FOR THE CONTENT FOR THE INTRO -->
+                <div class="col-md-6 intros">
+                  <h1 class="display-2">
+                    <span class="display-2--intro">je suis Florent de la boutique d'eva</span>
+                    <span class="display-2--description lh-base">je suis Florent de la boutique d'eva -- description du site</span>
+                  </h1>
+                  <button type="button" class="rounded-pill btn-rounded">Appelez-moi
+                    <span><i class="fas fa-arrow-right"></i></span>
+                  </button>
+                </div>
+                <!-- START FOR THE CONTENT FOR THE VIDEO  -->
+                <div class="col-md-6 intros text-end">
+                  <div class="video-box">
+                    <img src="images/arts/html-two-color.png" alt="video illustration" class="img-fluid">
+                    <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
+                      <span>
+                        <i class="fas fa-play-circle"></i>
+                      </span>
+                      <span class="border-animation"></span>
+                      
+                    </a>
+                  </div>
+                </div>
+                
+              </div>
+              
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,256L36.9,128L73.8,256L110.8,224L147.7,64L184.6,224L221.5,128L258.5,288L295.4,96L332.3,96L369.2,288L406.2,224L443.1,224L480,128L516.9,32L553.8,128L590.8,288L627.7,192L664.6,288L701.5,320L738.5,288L775.4,64L812.3,224L849.2,192L886.2,160L923.1,224L960,160L996.9,288L1033.8,96L1070.8,224L1107.7,64L1144.6,192L1181.5,288L1218.5,288L1255.4,256L1292.3,96L1329.2,192L1366.2,32L1403.1,0L1440,96L1440,320L1403.1,320L1366.2,320L1329.2,320L1292.3,320L1255.4,320L1218.5,320L1181.5,320L1144.6,320L1107.7,320L1070.8,320L1033.8,320L996.9,320L960,320L923.1,320L886.2,320L849.2,320L812.3,320L775.4,320L738.5,320L701.5,320L664.6,320L627.7,320L590.8,320L553.8,320L516.9,320L480,320L443.1,320L406.2,320L369.2,320L332.3,320L295.4,320L258.5,320L221.5,320L184.6,320L147.7,320L110.8,320L73.8,320L36.9,320L0,320Z"></path></svg> -->
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,224L40,218.7C80,213,160,203,240,213.3C320,224,400,256,480,266.7C560,277,640,267,720,240C800,213,880,171,960,149.3C1040,128,1120,128,1200,144C1280,160,1360,192,1400,208L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg> -->
+            
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,224L40,218.7C80,213,160,203,240,213.3C320,224,400,256,480,266.7C560,277,640,267,720,240C800,213,880,171,960,149.3C1040,128,1120,128,1200,144C1280,160,1360,192,1400,208L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+            
+          </section>
+          <!-- START THE CAMPANIES SECTION -->
+          <section id="campanies" class="campanies">
+            <div class="container">
+              <div class="row text-center">
+                <h4 class="fw-bold lead mb-3 mt-5">Partenaires&co</h4>
+                <div class="heading-line mb-5"></div>
+
+              </div>
+
+            </div>
+            <!-- START THE CAMPANIES CONTENT -->
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4 col-lg-2">
+                  <div class="company__logo-box shadow-sm"><img src="images/campanies/campany-1.png" alt="" title="" class="img-fluid"></div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                  <div class="company__logo-box shadow-sm"><img src="images/campanies/campany-2.png" alt="" title="" class="img-fluid"></div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                  <div class="company__logo-box shadow-sm"><img src="images/campanies/campany-3.png" alt="" title="" class="img-fluid"></div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                  <div class="company__logo-box shadow-sm"><img src="images/campanies/campany-4.png" alt="" title="" class="img-fluid"></div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                  <div class="company__logo-box shadow-sm"><img src="images/campanies/campany-5.png" alt="" title="" class="img-fluid"></div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                  <div class="company__logo-box shadow-sm"><img src="images/campanies/campany-6.png" alt="" title="" class="img-fluid"></div>
+                </div>
+
+              </div>
+
+            </div>
+
+
+          </section>
+
+          <!-- START SECTION 4 THE SERVICES -->
+          <section id="services" class="services">
+            <div class="container">
+              <div class="row text-center">
+                <h1 class="display-3 fw-bold">Our services</h1>
+                <div class="heading-line mb-5"></div>
+              </div>
+            </div>
+
+            <!-- START THE DESCRIPTION CONTENT -->
+            <div class="container">
+              <div class="row pt-2 pb-2 mt-5 mb-3">
+                <div class="col-md-6 border-right">
+                  <div class="bg-white p-3">
+                    <h2 class="fw-bold  text-center">Besoin d'un conseil pour faire évoluer votre site ? 
+                    </br> La boutique d'Eva </br>Pensez-y pour vous aider. </h2>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="bg-white p-4 text-start">
+                    <p class="fw-light"> La boutique d'Eva pour : dépanner, créer votre présence en ligne (une page web, un site, une campagne de pub). Aussi pour vous faire connaître, développer votre activté par une optimisation de vos pages en terme de graphisme -choix d'un thème parmi les plus populaires- , de contenu - gràce à l'IA -, ou encore d'optimisation SEO pour leur referencement avec les moeteurs de recherche. Chaque cas, chaque besoin est étudié dans sa spécificité et une réponse rapide vous est proposé pour valider la faisabilité de votre projet.   </p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- START THE CONTENT FOR THE SERVICES -->
+            
+            <div class="container">
+              <!-- START FOR SECTION1 -->
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
+                  <div class="services__content">
+                    <div class="icon d-block fas fa-paper-plane"></div>
+                    <h3 class="display-3--title mt-1">Votre présence en ligne</h3>
+                    <p class="lh-lg">Avoir un site / une page web qui vous représente sur le web. La boutique d'eva vous propose de créer un site à votre image. Que se soit dans le choix d'un tempalte adapté parmi les + populaires, ou l'integration d'une technologie sous wordpress ou en ligne de code, la réponse la plus pertinenete vous sera apportée.   </p>
+                    <button type="button" class="rounded-pill btn-rounded border-primary">plus
+                      <span><i class="fas fa-arrow-right"></i></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
+                  <div class="services__pic">
+                    <img src="images/services/team-work-two-color-e4641.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+
+
+              </div>
+              
+                
+              
+              <!-- START FOR SECTION2 : FAIRE GRIMPER VOTRE ACTIVITE (RESEAUX SOCIAUX, CAMPAGNES PUBLICITAIRES) -->
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
+                  <div class="services__content">
+                    <div class="icon d-block fas fa-paper-plane"></div>
+                    <h3 class="display-3--title mt-1">Faire grimper votre Activité</h3>
+                    <p class="lh-lg">la boutique d'eva est là pour vous aider si vous souhaiter vous faire connaître sur les reseaux sociaux ou bien pour lancer une campgne publicitaires sur Google</p>
+                    <button type="button" class="rounded-pill btn-rounded border-primary">plus
+                      <span><i class="fas fa-arrow-right"></i></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
+                  <div class="services__pic">
+                    <img src="images/services/career-monochromatic-b7df4.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+
+              </div>
+             
+              <!-- START FOR THE SECTION3 : SE FAIRE REFERENCE (SEO)-->
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
+                  <div class="services__content">
+                    <div class="services__content">
+                      <div class="icon d-block fas fa-paper-plane"></div>
+                      <h3 class="display-3--title mt-1">Optimiser le contenu de vos pages</h3>
+                      <p class="lh-lg">Il est indispensable aujourd'hui pour accroitre votre audience de proposer un contenu adapté pour être référence par les moteurs de recherche. Gràce à l'IA notamment ou bien un otils tel Yoast SEO sur Wordpress, la boutique d'eva vous assisate et vous conseille dans la creation de contenu pour vos pages. </p>
+                      <button type="button" class="rounded-pill btn-rounded border-primary">plus
+                        <span><i class="fas fa-arrow-right"></i></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
+                  <div class="services__pic">
+                    <img src="images/services/fast-working-two-color.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+
+              </div>
+              
+                
+              
+            </div>
+          </section>
+
+           <!-- START SECTION 5 THE TESTIMONIALS -->
+
+           <section id="testimonials">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,224L40,218.7C80,213,160,203,240,213.3C320,224,400,256,480,266.7C560,277,640,267,720,240C800,213,880,171,960,149.3C1040,128,1120,128,1200,144C1280,160,1360,192,1400,208L1440,224L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+            <div class="container">
+              <div class="row text-center text-white">
+                <h1 class="display-3 fw-bold">Testimonials</h1>
+                <hr style="width: 100px; height: 3px;" class="mx-auto">
+                <p class="lead pt-1">ce que pensent les clients</p>
+              </div>
+              <!-- START THE CAROUSEL CONTENT -->
+              <div class="row align-items-center">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                  
+                  <div class="carousel-inner">
+                    <!-- CAROUSEL ITEM-1 -->
+                    <div class="carousel-item active">
+                      <div class="testimonials__card">
+                        <p class="lh-lg">
+                          <i class="fas fa-quote-left"></i>
+                          Notre Fondation avait besoin d'un site et nous vous remercions du travail accompli, notre collaboration aura donc été fructueuse ! Merci pour votre aide et votre présence.  <i class="fas fa-quote-right"></i>
+                          <div class="ratings">
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </p>
+                      </div>
+                      <div class="testimonials__picture">
+                        <img src="images/testimonials/fanny_lepoivre_jpg.jpg" alt="Fondation Territoriale Loire-Atlantique Fanny Lepoivre" class="img-fluid rounded-circle">
+
+                      </div>
+                      <div class="testimonials__name">
+                        <h3>Fanny lepoivre</h3>
+                        <p class="fw-light">Déléguée générale</p>
+                      </div>
+                      
+                    </div>
+                     <!-- CAROUSEL ITEM-2 -->
+                     <div class="carousel-item">
+                      <div class="testimonials__card">
+                        <p class="lh-lg">
+                          <i class="fas fa-quote-left"></i>
+                          Nous avons pu apprécier le travail fourni : la maquette du site de notre association a été approuvée par toute l'équipe... <i class="fas fa-quote-right"></i>
+                          <div class="ratings">
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"> </i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </p>
+                      </div>
+                      <div class="testimonials__picture">
+                        <img src="images/testimonials/Kabson_Adama.jpg" alt="SOALI Kabson Adama" class="img-fluid rounded-circle">
+
+                      </div>
+                      <div class="testimonials__name">
+                        <h3>Kabson Adama</h3>
+                        <p class="fw-light">Président</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,224L40,218.7C80,213,160,203,240,213.3C320,224,400,256,480,266.7C560,277,640,267,720,240C800,213,880,171,960,149.3C1040,128,1120,128,1200,144C1280,160,1360,192,1400,208L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+            
+           </section>
+
+           <!-- THE FAQ SECTION -->
+           <section id="faq" class="faq">
+            <div class="container">
+              <div class="row text-center">
+                <h1 class="display-3 fw-bold text-uppercase">faq</h1>
+                <div class="heading-line"></div>
+                <p class="lead">les questions courantes les plus fréquemment posées</p>
+              </div>
+              <!-- ACCORDION CONTENT -->
+              <div class="row mt-5">
+                <div class="col-md-12">
+                  <div class="accordion" id="accordionExample">
+                    <!-- ACCORDION ITEM1 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          est-ce que je peux modifier moi-même des éléments de mon site ?
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          - Oui et c’est bien notre principale préoccupation, que vous soyez <strong>autonome </strong> sur votre site. Que ce soit en terme d’ <code>accés à vos données en ligne </code>, à votre compte, que l’accés à votre Dashboard vous soit facilité et que dans certains cas vous puissiez apporter vous-mêmes des modifications sur vos pages, vos articles, …  </div>
+                      </div>
+                    </div>
+                    <!-- ACCORDION ITEM2 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Puis-je avoir une aide dans la rédaction des articles de mon site ?
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          - Si c ‘est un sujet un peu compliqué à aborder puisque de nombreuses demandes ont été faites en ce sens, je dirai oui et non. D’abord il me parait indispensable que vous soyez pleinement <strong>responsable du contenu informationnel </strong> de votre site, et par conséquent seul auteur de celui-ci <code>sur vos pages principales et même en annexes </code>. Néanmoins une aide aujourd’hui peut être proposé grâce à l’<strong>IA</strong>. Je dirai donc selon le cas il serait en effet possible d’apporter une aide rédactionnelle pour le contenu de vos pages et vos articles.  
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ACCORDION ITEM3 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Est-il possible d’être mieux référencé sur les moteurs de recherche sans investissement financier ?
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          - Tout à fait : il existe des outils tel <code>Yoast SEO </code> pour wordpress qui sont des outils performant pour cela. <strong>Un contenu optimisé pour les moteurs de recherche </strong> peut-être élaboré à partir de  vos articles existants ou la validation de vos pages actuelles pour un meilleur indexage sur le net.   
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ACCORDION ITEM4 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                          Je souhaite vendre sur mon site internet. Pouvez-vous installer une solution de eCommerce ?
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Une boutique en ligne peut très bien être installée et utilisée pour vendre sur internet. 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+           </section>
+
+           <!-- START SECTION 7 THE PORTFOLIO -->
+           <section id="portfolio" class="portfolio">
+            <div class="container">
+              <div class="row text-center mt-5">
+                <h1 class="display-3 fw-bold">last works</h1>
+                <div class="heading-line"></div>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sequi corporis enim cum quisquam sed maiores nobis, sint, doloribus unde temporibus modi provident, explicabo nihil. Quae sint amet suscipit aut?</p>
+              </div>
+              <!-- FILTER BUTTONS -->
+              <div class="row mt-3 g-3 text-center">
+                <div class="col-md-12">
+                  <button id="tout" class="btn btn-outline-primary" type="button">tout</button>
+                  <button id="evenementiels" class="btn btn-outline-primary" type="button">evenementiels</button>
+                  <button id="migration" class="btn btn-outline-primary" type="button">migration / maintenance</button>
+                  <button id="maquettes" class="btn btn-outline-primary" type="button">maquettes / design</button>
+                
+                </div>
+              </div>
+
+              <!-- START THE PORTFOLIO ITEMS -->
+              <div class="row">
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box evenementiels shadow">
+                    <img src="images/portfolio/portfolio-1.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>plaquette d'infos pour evenements à venir</h4>
+                        <p>evenementiels</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box evenementiels shadow">
+                    <img src="images/portfolio/portfolio-2.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>Une présentation d'un projet de création d'entreprise - type flyer -</h4>
+                        <p>evenementiels</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box evenementiels shadow">
+                    <img src="images/portfolio/portfolio-3.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>page perso pour un musicien</h4>
+                        <p>evenementiels</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box evenementiels shadow">
+                    <img src="images/portfolio/portfolio-4.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>projet personnel (Openclassrooms) : un festival de cinema en plein air</h4>
+                        <p>evenementiels</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box evenementiels shadow">
+                    <img src="images/portfolio/portfolio-5.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>Association SOLAI - le compte facebook -</h4>
+                        <p>evenementiels</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box migration shadow">
+                    <img src="images/portfolio/portfolio-6.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>eva-shop.net (choix du template)</h4>
+                        <p>migration wordpress</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box migration shadow">
+                    <img src="images/portfolio/portfolio-7.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>le site de la fondation territ. de Loire Atlantique</h4>
+                        <p>migration wordpress</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box migration shadow">
+                    <img src="images/portfolio/portfolio-8.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>le site du FT44 (achat d'un template payant)</h4>
+                        <p>migration wordpress</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box migration shadow">
+                    <img src="images/portfolio/portfolio-9.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>le site du FT44 (choix du template)</h4>
+                        <p>migration wordpress</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box migration shadow">
+                    <img src="images/portfolio/portfolio-10.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>Une association toulousaine (CAVACS) et son nouveau Site</h4>
+                        <p>migration wordpress</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box maquettes shadow">
+                    <img src="images/portfolio/portfolio-11.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>l'Association SOLAI : choix pour le graphisme du site</h4>
+                        <p>maquettes / design</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box maquettes shadow">
+                    <img src="images/portfolio/portfolio-12.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>l'Association SOLAI : la maquette du site</h4>
+                        <p>maquettes / design</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box maquettes shadow">
+                    <img src="images/portfolio/portfolio-13.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>mes templates wordpress préférés (1)</h4>
+                        <p>maquettes / design</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box maquettes shadow">
+                    <img src="images/portfolio/portfolio-14.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>la charte Qualité (main feature list)</h4>
+                        <p>maquettes / design</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box maquettes shadow">
+                    <img src="images/portfolio/portfolio-15.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>mes templates wordpress préférés (2)</h4>
+                        <p>maquettes / design</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-box maquettes shadow">
+                    <img src="images/portfolio/portfolio-16.png" alt="" title="">
+                    <div class="portfolio-info">
+                      <div class="caption">
+                        <h4>l'Association SOLAI : le logo</h4>
+                        <p>maquettes / design</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+           </section>
+
+           <!-- START SECTION 8 GET STARTED -->
+           <section id="contact" class="get-started">
+            <div class="container">
+              <div class="row text-center">
+                <h1 class="display-3 fw-bold text-capitalize">Get started</h1>
+                <div class="heading-line"></div>
+                <p class="lh-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur voluptatem nemo? Reiciendis, magnam quibusdam? Tempore, consequuntur. Consequatur corrupti suscipit voluptas ducimus reprehenderit ipsum consectetur quis itaque hic commodi! Accusantium.</p>
+              
+              </div>
+              <!-- START THE CTA CONTENT -->
+              <div class="row">
+                <div class="col-12 col-lg-6 gradient shadow p-3">
+                  <div class="cta-info w-100">
+                    <h4 class="display-4 fw-bold">100% satisfaction Guaranted</h4>
+                    <p class="lh-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni ullam dolores reiciendis obcaecati. Aliquid quia magnam earum quidem, pariatur, ad amet cupiditate sunt omnis dignissimos odit, nemo voluptatem assumenda tenetur?</p>
+                  
+                    <h3 class="display-3--brief">What will next step ?</h3>
+                    <ul class="cta-info__list">
+                      <li style="list-style : none;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                      <li style="list-style : none;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </li>
+                      <li style="list-style : none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. .</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 bg-white shadow p-3">
+                  <div class="form w-100 pb-2">
+                    <h4 class="display-3--title mb-5">start the project</h4>
+                    <form action="#" class="row">
+                      <!-- <div class="col-lg-6 col-md-6 mb-3">
+                        <input type="text" placeholder="First Name" id="inputFirstName" class="form-control-lg shadow form-control">
+                      </div> -->
+                      <div class="col-lg-6 col-md-6 mb-3">
+                        <input type="text" placeholder="Name" id="name" class="form-control-lg shadow form-control">
+                      </div>
+                      <div class="col-lg-12 mb-3">
+                        <input type="email" placeholder="email address" id="email" class="form-control-lg shadow form-control">
+                      </div>
+                      <div class="col-lg-12 mb-3">
+                        <textarea name="message" placeholder="message" id="message" cols="30" rows="8" class="form-control-lg shadow form-control"></textarea>
+                      </div>
+                      <div class="text-center d-grid mt-1">
+                        <button type="button" class="btn-primary rounded-pill pt-3 pb-3" onclick="sendMail()">
+                          submit
+                          <i class="fas fa-paper-plane"></i>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+           </section>
+
+           <!-- START SECTION 9 THE FOOTER -->
+           <footer class="footer">
+            <div class="container">
+              <div class="row">
+                <!-- CONTENT FOR THE MOBILE NUMBER  -->
+                <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+                  <div class="contact-box__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-outgoing" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                      <path d="M15 9l5 -5" />
+                      <path d="M16 4l4 0l0 4" />
+                    </svg>
+                  </div>
+                  <div class="contact-box__info">
+                    <a href="#" class="contact-box__info--title">(+1) 327672771</a>
+                    <p class="contact-box__info--subtitle">  Mon-Fri 9am-6pm</p>
+                  </div>
+                </div>  
+                <!-- CONTENT FOR EMAIL  -->
+                <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+                  <div class="contact-box__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" stroke-width="0" fill="currentColor" />
+                      <path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z" stroke-width="0" fill="currentColor" />
+                    </svg>
+                  </div>
+                  <div class="contact-box__info">
+                    <a href="#" class="contact-box__info--title">florent.larose@hotmail.com</a>
+                    <p class="contact-box__info--subtitle">Online support</p>
+                  </div>
+                </div>
+                <!-- CONTENT FOR LOCATION  -->
+                <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+                  <div class="contact-box__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5" />
+                      <path d="M9 4v13" />
+                      <path d="M15 7v5.5" />
+                      <path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" />
+                      <path d="M19 18v.01" />
+                    </svg>
+                  </div>
+                  <div class="contact-box__info">
+                    <a href="#" class="contact-box__info--title">Bachant (FR), </a>
+                    <p class="contact-box__info--subtitle">59138</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+             
+           <!-- START THE SOCIAL MEDIA CONTENT -->
+           <div class="footer-sm" style="background-color: #212121;">
+              <div class="container">
+                <div class="row py-4 text-center">
+                  <div class="col-lg-5 col-md-6 mb-4" style="color: #fff;">connectons-nous sur les réseaux sociaux</div>
+                  <div class="col-lg-7 col-md-6">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+           </div> 
+
+           <!-- START THE CONTENT FOR COMPANY INFO -->
+           <div class="container">
+            <div class="row justify-content-center mt-3 pb-3">
+              <div class="col-12 col-sm-6 col-lg-6">
+                <h5 class="text-capitalise fw-bold">la boutique d'eva</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px;height: 2px;">
+                <p class="lh-lg">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, repellendus corrupti aliquid esse officiis iure nobis! Reiciendis sunt cupiditate eius deleniti iure, non dolorem quia vel? Dolores quaerat excepturi assumenda.
+                </p>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-2 mb-4">
+                <h5 class="text-capitalise fw-bold">product</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px;height: 2px;">
+                <ul class="list-inline">
+                  <li><a href="#">Lorem ipsum </a></li>
+                  <li><a href="#">Lorem ipsum </a></li>
+                  <li><a href="#">Lorem ipsum </a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-2 mb-4">
+                <h5 class="text-capitalise fw-bold">usefull links</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px;height: 2px;">
+                <ul class="list-inline">
+                  <li><a href="#">your account</a></li>
+                  <li><a href="#">become an affiliate </a></li>
+                  <li><a href="#">create account </a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-2 mb-4">
+                <h5 class="text-capitalise fw-bold">contact</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px;height: 2px;">
+                <ul class="list-inline">
+                  <li><a href="#">Lorem ipsum </a></li>
+                  <li><a href="#">Lorem ipsum </a></li>
+                  <li><a href="#">Lorem ipsum </a></li>
+                </ul>
+              </div>
+            </div>
+           </div>
+            
+           </footer>
+
+
+           <!-- APPEL DE JQUERY -->
+          <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+           
+          <!-- CODE JQUERY CI-DESSOUS -->
+          <script>
+            $(document).ready(function(){
+            // jQuery code goes here
+
+            $("#tout").click(function () {
+  
+              $(".portfolio-box").css("visibility","visible");
+              /* $(".evenementiels").css("display","box");
+              $(".migration").css("display","box");
+              $(".maquettes").css("display","box"); */
+             });
+             
+             $("#evenementiels").click(function () {
+               
+               $(".evenementiels").css("visibility","visible");
+               //$(".evenementiels").css("display","box");
+               $(".migration").css("visibility", "hidden");
+               //$(".migration").css("display", "none");
+               $(".maquettes").css("visibility", "hidden");
+               //$(".maquettes").css("display", "none");
+               console.log("valeur de display pour la class migration : ");
+               console.log($('.migration').attr('style'));
+             });
+             
+             $("#migration").click(function () {
+               
+               $(".migration").css("visibility","visible");
+               //$(".migration").css("display","box");
+               $(".evenementiels").css("visibility", "none");
+               //$(".evenementiels").css("display", "none");
+               $(".maquettes").css("visibility", "hidden");
+               //$(".maquettes").css("display", "none");
+             });
+             
+             $("#maquettes").click(function () {
+               
+               $(".maquettes").css("visibility","visible");
+               //$(".maquettes").css("display","box")
+               $(".migration").css("visibility", "none");
+               //$(".migration").css("display", "none");
+               $(".evenementiels").css("visibility", "none");
+               //$(".evenementiels").css("display", "none");
+             });
+          });
+          </script>
+          
+
+
+          
+
+          <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script> -->
+          <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+        
+         <!-- <script src="/assets/vendors/js/glightbox.min.js"></script> -->
+         <script src="assets/vendors/js/glightbox.min.js"></script>
+         <script type="text/javascript">
+          const lightbox = GLightbox({
+                'href': 'https://www.loom.com/share/b3d7d03addca445b945cf87fce0404ee?sid=45d8f73e-1bf3-44c0-9f1f-49d230b157d3',
+                'type': 'video',
+                'source': 'loom', //vimeo, youtube or local
+                'width': 900,
+                });
+         </script>
+          <script src="dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>
